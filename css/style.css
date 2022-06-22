@@ -1,0 +1,86 @@
+/* CONTENEDORES FLEXIBLES */
+
+/*Todos los selectores que empiecen con la palabra class*/
+[class^="box"] {
+  margin: 3rem auto;
+  background-color: orangered;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+}
+
+/* para que sean flexibles se definen con unidades relativas no absulutas */
+.box-flexible {
+  width: 50%;
+  height: 20vh;
+}
+
+.box-flexible-2 {
+  max-width: 960px;
+  min-width: 280px;
+  max-height: 480px;
+  min-height: 280px;
+}
+
+/*la fluidez del max y min con valores absolutas no va a funcionar*/
+.box-flexible-3 {
+  max-width: 960px;
+  min-width: 280px;
+  max-height: 480px;
+  min-height: 280px;
+  width: 300px;
+  height: 300px;
+}
+
+/*como el contenedor padre(.container) tiene un max-width de 1200px y como su width
+es del 50% entonces solo crece a 600px máximo, y al momento de no tener un contenedor padre
+entonces si llega a un ancho máximo de 960px*/
+.box-flexible-4 {
+  max-width: 960px;
+  min-width: 280px;
+  max-height: 480px;
+  min-height: 280px;
+  width: 50%;
+  height: 20vh;
+}
+
+/* IMÁGENES RESPONSIVAS*/
+img,
+iframe,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/*atributos srcset y sizes */
+/*al utilizar estos atributos las versiones de las imágenes deberían ser las mismas*/
+
+.responsive-media {
+  position: relative;
+  max-width: 100%;
+  height: 0;
+  /* Formato widescreen 16:9
+  16 ---> 100%
+   9 ---> 56.25%
+  */
+  padding-bottom: 56.25%;
+}
+
+.responsive-media > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.aspect-ratio-16-9 {
+  background-color: rebeccapurple;
+  aspect-ratio: 4/3;
+  aspect-ratio: 1/1;
+  aspect-ratio: 16/9;
+}
+
+.aspect-ratio-1-1 {
+  aspect-ratio: 1/1;
+}
