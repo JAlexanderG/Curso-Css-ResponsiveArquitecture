@@ -7,7 +7,11 @@
     <title>Curso Responsive Design y Arquitectura CSS</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
     <link rel="stylesheet" href="css/init.css">
+    <!-- Esta hoja de estilos va aplicar solo cuando el usuario mande a imprimir -->
+    <link rel="stylesheet" media="print" href="css/print.css">
+    <link rel="stylesheet" href="css/grid.css">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -590,8 +594,30 @@
             <pre><code class="language-html">&lt;meta name="viewport" content="width=device-width,initial-scale=1.0"&gt;</code></pre>
         </article>
         <hr>
+        <!--  -->
         <article id="responsive-grid" class="full-screen">
             <h2><i>Responsive Grid</i></h2>
+            <section class="row">
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 1</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 2</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 3</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 4</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 5</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 6</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 7</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 8</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 9</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 10</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 11</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 12</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 13</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 14</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 15</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 16</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 17</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 18</article>
+                <article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 19</article>
+            </section>
         </article>
         <hr>
         <article id="feature-queries" class="full-screen">
@@ -632,7 +658,7 @@
             <h3>Sintaxis</h3>
             <pre><code class="language-css">
 .card {
-  contain: layout inline-size;
+  contain: layout inline-size style;
 }
 
 @container (min-width: 600px) {
@@ -642,275 +668,312 @@
 }
       </code></pre>
             <h3>Ejemplo</h3>
-            <aside></aside>
-        </article>
-        <hr>
-        <article id="seo" class="full-screen">
-            <h2><i>SEO</i></h2>
-            <h3><i>Search Engine Optimization</i></h3>
-            <h4><i>Mobilegeddon</i></h4>
-            <p>
-                Es la actualización al algoritmo de <i>Google</i>, que está activo desde el <b>21 de abril de 2015</b>.
-            </p>
-            <p>
-                Teniendo en cuenta el auge imparable de los dispositivos móviles y el impacto que éstos están teniendo
-                en las
-                costumbres
-                de uso de la <i>web</i>, <i>Google</i> hizo un comunicado a través de su <a
-                    href="http://googlewebmastercentral.blogspot.com.es/2015/02/finding-more-mobile-friendly-search.html"
-                    target="_blank">blog oficial</a> comentando algunas de las novedades que trae la actualización de su
-                algoritmo.
-            </p>
-            <p>
-                <i>Mobilegeddon</i> pretende actuar sobre todas aquellas webs que no sean amigables con los dispositivos
-                móviles, es
-                decir
-                que no se adapten de forma óptima a dichos dispositivos.
-            </p>
-            <p>
-                Dado que las estrategias de <i>Google</i> se enfocan cada vez más hacia estos dispositivos, es normal
-                que el
-                buscador
-                quiera
-                asegurarse que las <i>webs</i> que indexa cumplen los mínimos de calidad para móviles.
-            </p>
-            <p>
-                <i>Mobilegeddon</i>, afecta:
-            </p>
-            <ul>
-                <li>Exclusivamente a las búsquedas realizadas desde dispositivos móviles.</li>
-                <li>La aplicación del algoritmo será en todos los idiomas y de forma global.</li>
-                <li>No se aplicará a sitios webs completos , sólo a las páginas que no cumplan los criterios.</li>
-            </ul>
-            <h4>Buenas prácticas de <i>SEO</i> y <i>Responsive, según <i>Google</i></i></h4>
-            <ul>
-                <li><a href="https://developers.google.com/webmasters/mobile-sites/?hl=es" target="_blank">Guía de
-                        <i>Google</i>
-                        para
-                        sitios
-                        móviles</a></li>
-                <li><a href="https://developers.google.com/webmasters/mobile-sites/mobile-seo/?hl=es"
-                        target="_blank"><i>SEO</i>
-                        para
-                        móviles</a></li>
-                <li><a href="https://www.google.com/webmasters/tools/mobile-friendly/" target="_blank"><i>Mobile
-                            Friendly
-                            Test</i></a>
-                </li>
-                <li><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank"><i>PageSpeed
-                            Insights</i></a>
-                </li>
-            </ul>
-        </article>
-        <hr>
-        <article id="desktop-mobile" class="full-screen">
-            <h2><i>Responsive Design</i></h2>
-            <p>
-                Es el paradigma actual del diseño <i>web</i>. Son un conjunto de buenas prácticas a nivel de código
-                <i>CSS</i>
-                para adaptar el contenido del documento <i>HTML</i> al tamaño de pantalla del dispositivo que lo
-                visualice.
-            </p>
-            <p>
-                Tiene 3 principios:
-            </p>
-            <ol>
-                <li>Grids Flexibles</li>
-                <li>Imágenes Flexibles</li>
-                <li>Media Queries</li>
-            </ol>
-            <p>
-                Fue propuesto por <a href="https://ethanmarcotte.com/" target="_blank"><i>Ethan Marcotte</i></a> en
-                2010.
-            </p>
-            <h3>Más información</h3>
-            <ul>
-                <li><a href="https://alistapart.com/article/responsive-web-design/" target="_blank">Artículo
-                        <i>Responsive
-                            Design</i></a></li>
-                <li><a href="https://abookapart.com/products/responsive-web-design" target="_blank">Libro <i>Responsive
-                            Design</i></a></li>
-            </ul>
-            <h3><i>Desktop First VS Mobile First</i></h3>
-            <p>
-                Son las 2 estrategias que tiene el <i>Responsive Design</i> para adaptar el contenido al tamaño de la
-                pantalla,
-                centrándose en los dispositivos con pantalla más pequeña (<i>Mobile First</i>) o a la inversa,
-                centrándose en
-                los dispositivos con pantalla más grande (<i>Desktop First</i>).
-            </p>
-            <section class="grid-1-2">
-                <article>
-                    <h3><i>Desktop First</i></h3>
-                    <h4>(<i>Graceful Degradation</i>)</h4>
-                    <p>Las <i>media queries</i> se deben definir de la <b>mayor a la menor</b>.</p>
-                    <p>Se utiliza la propiedad <b><i>max-width</i></b> para definir las <i>mediaqueries</i>.</p>
-                    <img class="w-75" src="https://jonmircha.com/img/blog/desktop-first.jpg" alt="Desktop First">
-                </article>
-                <article>
-                    <h3><i>Mobile First</i></h3>
-                    <h4>(<i>Progressive Enhancement</i>)</h4>
-                    <p>Las <i>media queries</i> se deben definir de la <b>menor a la mayor</b>.</p>
-                    <p>Se utiliza la propiedad <b><i>min-width</i></b> para definir las <i>mediaqueries</i>.</p>
-                    <img class="w-75" src="https://jonmircha.com/img/blog/mobile-first.jpg" alt="Mobile First">
-                </article>
-            </section>
-        </article>
-        <hr>
-        <article id="adaptive-design" class="full-screen">
-            <h2><i>Adaptive Design</i></h2>
-            <p>
-                El <i>Adaptive Design</i>, trata de crear interfaces que se adapten a las capacidades y características
-                de cada
-                dispositivo (<i>Hardware</i> y <i>Software</i>).
-            </p>
-            <p>
-                Utiliza programación <i>JavaScript</i> para los
-                cambios en la interfaz.
-            </p>
-            <p>
-                Además podría tener diferentes <i>fronts</i> dependiendo de los dispositivos que soliciten el recurso,
-                por
-                ejemplo:
-            </p>
-            <ul>
-                <li><a href="https://facebook.com/" target="_blank"><i>Facebook Desktop</i></a></li>
-                <li><a href="https://m.facebook.com/" target="_blank"><i>Facebook Mobile</i></a></li>
-            </ul>
-            <p>
-                Fue propuesto por <a href="https://www.aaron-gustafson.com/" target="_blank"><i>Aaron Gustafson</i></a>
-                en 2011.
-            </p>
-            <h3>Más información</h3>
-            <ul>
-                <li><a href="https://blog.easy-designs.net/archives/on-adaptive-vs-responsive-web-design/"
-                        target="_blank">Artículo <i>Adaptive
-                            Design</i></a></li>
-                <li><a href="https://adaptivewebdesign.info/" target="_blank">Libro <i>Adaptive
-                            Design</i></a></li>
-                <li><a href="https://www.youtube.com/watch?v=WHfyN411fd4&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA"
-                        target="_blank">Detección de Dispositivos con <i>JS</i></a></li>
-            </ul>
-        </article>
-        <hr>
-        <article id="ress" class="full-screen">
-            <h2><i>Responsive Design + Server Side Components (RESS)</i></h2>
-            <p>
-                El <i>Responsive Design + Server Side Components (RESS)</i>, trata de crear interfaces que se adapten a
-                las
-                capacidades y características de cada
-                dispositivo (<i>Hardware</i> y <i>Software</i>).
-            </p>
-            <p>
-                Pero a diferencia del <i>Adaptive Design</i>, la programación que usa esta del lado del servidor. Las
-                interfaces
-                se crean desde el <i>backend</i>, lo que permite usar la misma vista (ruta) para todos los dispositivos.
-            </p>
-            <ul>
-                <li><a href="https://twitter.com/" target="_blank"><i>Twitter</i></a></li>
-                <li><a href="https://youtube.com/" target="_blank"><i>YouTube</i></a></li>
-            </ul>
-            <p>
-                Fue propuesto por <a href="https://www.lukew.com/" target="_blank"><i>Luke Wroblewski</i></a> en 2011.
-            </p>
-            <h3>Más información</h3>
-            <ul>
-                <li><a href="https://www.lukew.com/ff/entry.asp?1392" target="_blank">Artículo original de <i>Luke
-                            Wroblewski</i></a></li>
-                <li><a href="https://www.creativebloq.com/responsive-web-design/getting-started-ress-5122956"
-                        target="_blank"><i>Getting started with RESS</i></a></li>
-            </ul>
-        </article>
-        <hr>
-        <article id="responsible-design" class="full-screen">
-            <h2><i>Responsible Responsive Design</i></h2>
-            <p>
-                Mientras que el <i>Responsive Design</i> se basa en buenas prácticas
-                de <i>CSS</i> para adaptar el contenido del documento <i>HTML</i> al tamaño de pantalla del dispositivo
-                que lo
-                visualice, el <i>Responsible Responsive Design</i> agrega buenas prácticas de programación <i>JS</i> no
-                sólo
-                para adaptar el contenido a la pantalla, sino también para mejorar el rendimiento y la carga de la
-                interfaz en
-                el navegador <i>web</i>.
-            </p>
-            <p>
-                Fue propuesto por <a href="https://scottjehl.com/" target="_blank"><i>Scott Jehl</i></a> en 2014.
-            </p>
-            <h3>Más información</h3>
-            <ul>
-                <li><a href="https://abookapart.com/products/responsible-responsive-design" target="_blank">Libro
-                        <i>Responsible
-                            Responsive Design</i></a></li>
-                <li><a href="https://www.youtube.com/watch?v=6IwUl-4pAzc&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA"
-                        target="_blank"><i>Responsive con JS</i></a></li>
-            </ul>
-        </article>
-        <hr>
-        <article id="fluid-design" class="full-screen">
-            <h2><i>Fluid Design</i></h2>
-            <p>
-                El <i>Fluid Design</i> es una técnica de <i>Responsive Design</i> que trata de escalar y adaptar el
-                contenido al
-                tamaño de la pantalla, sin la necesidad de ocupar <i>media queries</i>.
-            </p>
-            <p>
-                En lugar de diseñar para un determinado número de <i>breakpoints</i>, el <i>Fluid Design</i> crea un
-                sistema
-                dentro del cual los elementos escalan de manera proporcional y fluida.
-            </p>
-            <p>
-                Utiliza características y funciones modernas de <i>CSS</i> para hacer fluir las interfaces, por ejemplo:
-            </p>
-            <ul>
-                <li>Contenedores fluidos</li>
-                <li>Textos fluidos</li>
-                <li><a href="https://youtu.be/inVlqjPNmD8?list=PLvq-jIkSeTUY628cyd9LVbXSXi2xG9mUl&t=858"
-                        target="_blank"><i>Grids</i> responsivas sin <i>media queries</i></a></li>
-                <li>
-                    Uso de funciones como:
-                    <ul>
-                        <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=13261s"
-                                target="_blank"><i>calc</i></a></li>
-                        <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=13796s" target="_blank"><i>min,
-                                    max</i></a></li>
-                        <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=14123s"
-                                target="_blank"><i>clamp</i></a></li>
-                    </ul>
-                </li>
-                <li>
-                    Uso de unidades relativas como:
-                </li>
-                <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=6194s" target="_blank"><i>EMS</i></a></li>
-                <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=7070s" target="_blank"><i>REMs</i></a></li>
-                <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=7793s" target="_blank"><i>EXs</i></a></li>
-                <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=8158s" target="_blank"><i>CHs</i></a></li>
-                <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=8751s" target="_blank">Porcentajes</a></li>
-                <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=9764s" target="_blank">Unidades del
-                        <i>Viewport</i></a></li>
-            </ul>
-            <p>
-                Fue propuesto por <a href="https://www.trysmudford.com/" target="_blank"><i>Trys Mudford</i></a> en
-                2020.
-            </p>
-            <h3>Más información</h3>
-            <ul>
-                <li><a href="https://utopia.fyi/" target="_blank"><i>Utopia. Fluid Responsive Design</i></a></li>
-                <li><a href="https://utopia.fyi/blog" target="_blank"><i>Utopia Blog</i></a></li>
-                <li><a href="https://utopia.fyi/blog/designing-with-fluid-type-scales/" target="_blank"><i>Designing
-                            with fluid
-                            type scales</i></a></li>
-                <li><a href="https://utopia.fyi/blog/css-modular-scales/" target="_blank"><i>CSS-only fluid modular type
-                            scales</i></a></li>
-                <li><a href="https://utopia.fyi/type/calculator/" target="_blank"><i>Fluid type calculator</i></a></li>
-            </ul>
             <aside>
-                <h3>Ejemplos <i>Fluid Design</i></h3>
-                <h4><i>Grid</i> Fluida</h4>
-                <h4>Textos Fluidos</h4>
-                <h4>Contenedores Fluidos</h4>
+                <article class="card">
+                    <div class="card-container">
+                        <img class="card-image" src="img/puesta-sol.jpg" alt="Puesta de Sol">
+                        <aside class="card-content">
+                            <h4 class="card-title">Card Title</h4>
+                            <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Asperiores reiciendis corporis
+                                omnis nulla fuga. Praesentium corrupti ad facilis officia accusantium reprehenderit,
+                                libero sed dolorem obcaecati, est aliquid nam distinctio ab?</p>
+                        </aside>
+                    </div>
+                </article>
             </aside>
-        </article>
+            <!-- </article> -->
+            <hr>
+            <article id="seo" class="full-screen">
+                <h2><i>SEO</i></h2>
+                <h3><i>Search Engine Optimization</i></h3>
+                <h4><i>Mobilegeddon</i></h4>
+                <p>
+                    Es la actualización al algoritmo de <i>Google</i>, que está activo desde el <b>21 de abril de
+                        2015</b>.
+                </p>
+                <p>
+                    Teniendo en cuenta el auge imparable de los dispositivos móviles y el impacto que éstos están
+                    teniendo
+                    en las
+                    costumbres
+                    de uso de la <i>web</i>, <i>Google</i> hizo un comunicado a través de su <a
+                        href="http://googlewebmastercentral.blogspot.com.es/2015/02/finding-more-mobile-friendly-search.html"
+                        target="_blank">blog oficial</a> comentando algunas de las novedades que trae la actualización
+                    de su
+                    algoritmo.
+                </p>
+                <p>
+                    <i>Mobilegeddon</i> pretende actuar sobre todas aquellas webs que no sean amigables con los
+                    dispositivos
+                    móviles, es
+                    decir
+                    que no se adapten de forma óptima a dichos dispositivos.
+                </p>
+                <p>
+                    Dado que las estrategias de <i>Google</i> se enfocan cada vez más hacia estos dispositivos, es
+                    normal
+                    que el
+                    buscador
+                    quiera
+                    asegurarse que las <i>webs</i> que indexa cumplen los mínimos de calidad para móviles.
+                </p>
+                <p>
+                    <i>Mobilegeddon</i>, afecta:
+                </p>
+                <ul>
+                    <li>Exclusivamente a las búsquedas realizadas desde dispositivos móviles.</li>
+                    <li>La aplicación del algoritmo será en todos los idiomas y de forma global.</li>
+                    <li>No se aplicará a sitios webs completos , sólo a las páginas que no cumplan los criterios.</li>
+                </ul>
+                <h4>Buenas prácticas de <i>SEO</i> y <i>Responsive, según <i>Google</i></i></h4>
+                <ul>
+                    <li><a href="https://developers.google.com/webmasters/mobile-sites/?hl=es" target="_blank">Guía de
+                            <i>Google</i>
+                            para
+                            sitios
+                            móviles</a></li>
+                    <li><a href="https://developers.google.com/webmasters/mobile-sites/mobile-seo/?hl=es"
+                            target="_blank"><i>SEO</i>
+                            para
+                            móviles</a></li>
+                    <li><a href="https://www.google.com/webmasters/tools/mobile-friendly/" target="_blank"><i>Mobile
+                                Friendly
+                                Test</i></a>
+                    </li>
+                    <li><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank"><i>PageSpeed
+                                Insights</i></a>
+                    </li>
+                </ul>
+            </article>
+            <hr>
+            <article id="desktop-mobile" class="full-screen">
+                <h2><i>Responsive Design</i></h2>
+                <p>
+                    Es el paradigma actual del diseño <i>web</i>. Son un conjunto de buenas prácticas a nivel de código
+                    <i>CSS</i>
+                    para adaptar el contenido del documento <i>HTML</i> al tamaño de pantalla del dispositivo que lo
+                    visualice.
+                </p>
+                <p>
+                    Tiene 3 principios:
+                </p>
+                <ol>
+                    <li>Grids Flexibles</li>
+                    <li>Imágenes Flexibles</li>
+                    <li>Media Queries</li>
+                </ol>
+                <p>
+                    Fue propuesto por <a href="https://ethanmarcotte.com/" target="_blank"><i>Ethan Marcotte</i></a> en
+                    2010.
+                </p>
+                <h3>Más información</h3>
+                <ul>
+                    <li><a href="https://alistapart.com/article/responsive-web-design/" target="_blank">Artículo
+                            <i>Responsive
+                                Design</i></a></li>
+                    <li><a href="https://abookapart.com/products/responsive-web-design" target="_blank">Libro
+                            <i>Responsive
+                                Design</i></a></li>
+                </ul>
+                <h3><i>Desktop First VS Mobile First</i></h3>
+                <p>
+                    Son las 2 estrategias que tiene el <i>Responsive Design</i> para adaptar el contenido al tamaño de
+                    la
+                    pantalla,
+                    centrándose en los dispositivos con pantalla más pequeña (<i>Mobile First</i>) o a la inversa,
+                    centrándose en
+                    los dispositivos con pantalla más grande (<i>Desktop First</i>).
+                </p>
+                <section class="grid-1-2">
+                    <article>
+                        <h3><i>Desktop First</i></h3>
+                        <h4>(<i>Graceful Degradation</i>)</h4>
+                        <p>Las <i>media queries</i> se deben definir de la <b>mayor a la menor</b>.</p>
+                        <p>Se utiliza la propiedad <b><i>max-width</i></b> para definir las <i>mediaqueries</i>.</p>
+                        <img class="w-75" src="https://jonmircha.com/img/blog/desktop-first.jpg" alt="Desktop First">
+                    </article>
+                    <article>
+                        <h3><i>Mobile First</i></h3>
+                        <h4>(<i>Progressive Enhancement</i>)</h4>
+                        <p>Las <i>media queries</i> se deben definir de la <b>menor a la mayor</b>.</p>
+                        <p>Se utiliza la propiedad <b><i>min-width</i></b> para definir las <i>mediaqueries</i>.</p>
+                        <img class="w-75" src="https://jonmircha.com/img/blog/mobile-first.jpg" alt="Mobile First">
+                    </article>
+                </section>
+            </article>
+            <hr>
+            <article id="adaptive-design" class="full-screen">
+                <h2><i>Adaptive Design</i></h2>
+                <p>
+                    El <i>Adaptive Design</i>, trata de crear interfaces que se adapten a las capacidades y
+                    características
+                    de cada
+                    dispositivo (<i>Hardware</i> y <i>Software</i>).
+                </p>
+                <p>
+                    Utiliza programación <i>JavaScript</i> para los
+                    cambios en la interfaz.
+                </p>
+                <p>
+                    Además podría tener diferentes <i>fronts</i> dependiendo de los dispositivos que soliciten el
+                    recurso,
+                    por
+                    ejemplo:
+                </p>
+                <ul>
+                    <li><a href="https://facebook.com/" target="_blank"><i>Facebook Desktop</i></a></li>
+                    <li><a href="https://m.facebook.com/" target="_blank"><i>Facebook Mobile</i></a></li>
+                </ul>
+                <p>
+                    Fue propuesto por <a href="https://www.aaron-gustafson.com/" target="_blank"><i>Aaron
+                            Gustafson</i></a>
+                    en 2011.
+                </p>
+                <h3>Más información</h3>
+                <ul>
+                    <li><a href="https://blog.easy-designs.net/archives/on-adaptive-vs-responsive-web-design/"
+                            target="_blank">Artículo <i>Adaptive
+                                Design</i></a></li>
+                    <li><a href="https://adaptivewebdesign.info/" target="_blank">Libro <i>Adaptive
+                                Design</i></a></li>
+                    <li><a href="https://www.youtube.com/watch?v=WHfyN411fd4&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA"
+                            target="_blank">Detección de Dispositivos con <i>JS</i></a></li>
+                </ul>
+            </article>
+            <hr>
+            <article id="ress" class="full-screen">
+                <h2><i>Responsive Design + Server Side Components (RESS)</i></h2>
+                <p>
+                    El <i>Responsive Design + Server Side Components (RESS)</i>, trata de crear interfaces que se
+                    adapten a
+                    las
+                    capacidades y características de cada
+                    dispositivo (<i>Hardware</i> y <i>Software</i>).
+                </p>
+                <p>
+                    Pero a diferencia del <i>Adaptive Design</i>, la programación que usa esta del lado del servidor.
+                    Las
+                    interfaces
+                    se crean desde el <i>backend</i>, lo que permite usar la misma vista (ruta) para todos los
+                    dispositivos.
+                </p>
+                <ul>
+                    <li><a href="https://twitter.com/" target="_blank"><i>Twitter</i></a></li>
+                    <li><a href="https://youtube.com/" target="_blank"><i>YouTube</i></a></li>
+                </ul>
+                <p>
+                    Fue propuesto por <a href="https://www.lukew.com/" target="_blank"><i>Luke Wroblewski</i></a> en
+                    2011.
+                </p>
+                <h3>Más información</h3>
+                <ul>
+                    <li><a href="https://www.lukew.com/ff/entry.asp?1392" target="_blank">Artículo original de <i>Luke
+                                Wroblewski</i></a></li>
+                    <li><a href="https://www.creativebloq.com/responsive-web-design/getting-started-ress-5122956"
+                            target="_blank"><i>Getting started with RESS</i></a></li>
+                </ul>
+            </article>
+            <hr>
+            <article id="responsible-design" class="full-screen">
+                <h2><i>Responsible Responsive Design</i></h2>
+                <p>
+                    Mientras que el <i>Responsive Design</i> se basa en buenas prácticas
+                    de <i>CSS</i> para adaptar el contenido del documento <i>HTML</i> al tamaño de pantalla del
+                    dispositivo
+                    que lo
+                    visualice, el <i>Responsible Responsive Design</i> agrega buenas prácticas de programación <i>JS</i>
+                    no
+                    sólo
+                    para adaptar el contenido a la pantalla, sino también para mejorar el rendimiento y la carga de la
+                    interfaz en
+                    el navegador <i>web</i>.
+                </p>
+                <p>
+                    Fue propuesto por <a href="https://scottjehl.com/" target="_blank"><i>Scott Jehl</i></a> en 2014.
+                </p>
+                <h3>Más información</h3>
+                <ul>
+                    <li><a href="https://abookapart.com/products/responsible-responsive-design" target="_blank">Libro
+                            <i>Responsible
+                                Responsive Design</i></a></li>
+                    <li><a href="https://www.youtube.com/watch?v=6IwUl-4pAzc&list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA"
+                            target="_blank"><i>Responsive con JS</i></a></li>
+                </ul>
+            </article>
+            <hr>
+            <article id="fluid-design" class="full-screen">
+                <h2><i>Fluid Design</i></h2>
+                <p>
+                    El <i>Fluid Design</i> es una técnica de <i>Responsive Design</i> que trata de escalar y adaptar el
+                    contenido al
+                    tamaño de la pantalla, sin la necesidad de ocupar <i>media queries</i>.
+                </p>
+                <p>
+                    En lugar de diseñar para un determinado número de <i>breakpoints</i>, el <i>Fluid Design</i> crea un
+                    sistema
+                    dentro del cual los elementos escalan de manera proporcional y fluida.
+                </p>
+                <p>
+                    Utiliza características y funciones modernas de <i>CSS</i> para hacer fluir las interfaces, por
+                    ejemplo:
+                </p>
+                <ul>
+                    <li>Contenedores fluidos</li>
+                    <li>Textos fluidos</li>
+                    <li><a href="https://youtu.be/inVlqjPNmD8?list=PLvq-jIkSeTUY628cyd9LVbXSXi2xG9mUl&t=858"
+                            target="_blank"><i>Grids</i> responsivas sin <i>media queries</i></a></li>
+                    <li>
+                        Uso de funciones como:
+                        <ul>
+                            <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=13261s"
+                                    target="_blank"><i>calc</i></a></li>
+                            <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=13796s" target="_blank"><i>min,
+                                        max</i></a></li>
+                            <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=14123s"
+                                    target="_blank"><i>clamp</i></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        Uso de unidades relativas como:
+                    </li>
+                    <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=6194s" target="_blank"><i>EMS</i></a>
+                    </li>
+                    <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=7070s" target="_blank"><i>REMs</i></a>
+                    </li>
+                    <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=7793s" target="_blank"><i>EXs</i></a>
+                    </li>
+                    <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=8158s" target="_blank"><i>CHs</i></a>
+                    </li>
+                    <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=8751s" target="_blank">Porcentajes</a>
+                    </li>
+                    <li><a href="https://www.youtube.com/watch?v=p_lT7AgpEMU&t=9764s" target="_blank">Unidades del
+                            <i>Viewport</i></a></li>
+                </ul>
+                <p>
+                    Fue propuesto por <a href="https://www.trysmudford.com/" target="_blank"><i>Trys Mudford</i></a> en
+                    2020.
+                </p>
+                <h3>Más información</h3>
+                <ul>
+                    <li><a href="https://utopia.fyi/" target="_blank"><i>Utopia. Fluid Responsive Design</i></a></li>
+                    <li><a href="https://utopia.fyi/blog" target="_blank"><i>Utopia Blog</i></a></li>
+                    <li><a href="https://utopia.fyi/blog/designing-with-fluid-type-scales/" target="_blank"><i>Designing
+                                with fluid
+                                type scales</i></a></li>
+                    <li><a href="https://utopia.fyi/blog/css-modular-scales/" target="_blank"><i>CSS-only fluid modular
+                                type
+                                scales</i></a></li>
+                    <li><a href="https://utopia.fyi/type/calculator/" target="_blank"><i>Fluid type calculator</i></a>
+                    </li>
+                </ul>
+                <aside>
+                    <h3>Ejemplos <i>Fluid Design</i></h3>
+                    <h4><i>Grid</i> Fluida</h4>
+                    <h4>Textos Fluidos</h4>
+                    <h4>Contenedores Fluidos</h4>
+                </aside>
+            </article>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
 </body>

@@ -84,3 +84,149 @@ video {
 .aspect-ratio-1-1 {
   aspect-ratio: 1/1;
 }
+
+/*para mandar a imprimir*/
+@media print {
+  @page {
+    size: A5 landscape;
+  }
+
+  body {
+    font-size: 10pt;
+    font-family: sans-serif;
+    background-color: black;
+    color: greenyellow;
+  }
+}
+
+/*cuando se este en pantallas*/
+/*no-preference hace referencia a la configuración que tenga el navegador, esa es por default*/
+@media screen and (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: auto;
+    scroll-behavior: smooth;
+  }
+}
+
+/*Para modos oscuros y claros
+dark, light
+*/
+/*cuando sea pantalla y que esque de color prefiere*/
+/*Aplica siempre el tema con el que se este trabajando en el SO,
+no importa que este en cascada light siempre toma dark, y aunque estuviera
+solo light, no hace nada por la config del SO.
+
+valores -> reduce, no-preference, dark, light
+
+*/
+@media screen and (prefers-color-scheme: dark) {
+  html {
+    background-color: black;
+    color: teal;
+  }
+}
+@media screen and (prefers-color-scheme: light) {
+  html {
+    background-color: white;
+    color: darkblue;
+  }
+}
+@media screen and (prefers-color-scheme: no-preference) {
+  html {
+    background-color: white;
+    color: darkred;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html {
+    background-color: white;
+    color: black;
+  }
+}
+
+/*En Mobile First se usa min-width que significa lo mínimo, del valor que se de hacia arriba*/
+@media screen and (min-width: 480px) {
+  html {
+    background-color: lightpink;
+    background-color: white;
+  }
+}
+
+/*Para evitar problemas usar solamente max o min, no mesclar ambas */
+
+/*en Desktop First se usa max-width que significa lo máximo, del valor que se de hacia abajo*/
+@media screen and (max-width: 1024px) {
+  html {
+    background-color: lightgreen;
+    background-color: white;
+  }
+}
+
+/*para cuando un módulo nuevo sale, y para preguntar si ese navegador lo
+reconoce, sub-grid solo lo reconoce firefox y safari*/
+
+/*cuando el navegador soporte*/
+@supports (grid-template-columns: subgrid) {
+  html {
+    background-color: black;
+    color: greenyellow;
+  }
+}
+
+/*cuando el navegador no soporte*/
+@supports not (grid-template-columns: subgrid) {
+  html {
+    background-color: darkolivegreen;
+    color: white;
+  }
+}
+
+@supports (display: grid) and (grid-template-columns: subgrid) {
+  html {
+    background-color: darkslateblue;
+    color: lightseagreen;
+  }
+}
+
+@supports (display: grid) or (grid-template-columns: subgrid) {
+  html {
+    background-color: white;
+    color: black;
+  }
+}
+
+/* CONTAINER QUERIRES */
+/*Se adaptan a las necesidades de los contenidos*/
+
+.card {
+  border: thin solid #000;
+  margin: 0 auto;
+  max-width: 800px;
+  contain: layout inline-size style; /*se activan las caracteristícas de container queries*/
+}
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: 0 50%;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+/* chrome://flags */
+/* Por alguna razón me funciona en ningún navegador ni de diversar pruebas*/
+
+@container (min-width: 600px) {
+  .card-container {
+    display: flex;
+  }
+
+  .card-container > * {
+    width: 50%;
+    flex-basis: 50%;
+  }
+}
